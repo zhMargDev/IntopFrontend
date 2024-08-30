@@ -15,11 +15,14 @@
       <StoriesLineLayout
         style="margin-top: 25px;"
       />
+
+      <BigBannerLayout/>
   </div>
 </template>
 
 <script>
 import GradientBackground from '@/components/GradientBackground.vue';
+import BigBannerLayout from '@/layouts/BigBannerLayout.vue';
 import SearchLayout from '@/layouts/SearchLayout.vue';
 import StoriesLineLayout from '@/layouts/StoriesLineLayout.vue';
 
@@ -27,7 +30,8 @@ export default{
     components:{
       GradientBackground,
       SearchLayout,
-      StoriesLineLayout
+      StoriesLineLayout,
+      BigBannerLayout
     }
 }
 </script>

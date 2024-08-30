@@ -1,5 +1,5 @@
 <template>
-    <div id="stories_main">
+    <section id="stories_main">
         <button 
             class="arrow_button" 
             @click="leftScroll"
@@ -22,7 +22,7 @@
         >
             <img src="@/assets/svg_icons/arrow.svg" alt="Arrow icon">
         </button>
-    </div>
+    </section>
 </template>
 
 <script>
