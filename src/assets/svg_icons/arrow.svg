@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="11.005055"
+   height="6.3079948"
+   viewBox="0 0 11.005055 6.3079948"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="arrow.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="45.254834"
+     inkscape:cx="5.1154756"
+     inkscape:cy="5.0602329"
+     inkscape:window-width="1920"
+     inkscape:window-height="964"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <pattern
+       id="pattern0_0_16"
+       patternContentUnits="objectBoundingBox"
+       width="1"
+       height="1">
+      <use
+         xlink:href="#image0_0_16"
+         transform="scale(0.0078125)"
+         id="use1" />
+    </pattern>
+    <image
+       id="image0_0_16"
+       width="128"
+       height="128"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAPsAAAD7AFKhtV5AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALFQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcidCwAAADp0Uk5TAAEDBAUGCw0PGx4gISstLkBER11fYGFnaWtsk5eYmp2eo6Spq6ytrq+wsbK2zM/d4OPw8vP09vf4/uaZfbgAAAHzSURBVHja7drZTsJQFIXhBXWeBwQF5wlFAUUm1/s/mDeYgPS057RnbzXZ67Jp8/1J26QXBWw2m81ms9lsNpvN9jeW7J8c71a1tOru8cl+Mndg53VKkuP2pga/2R6T5PR1Z3ag0hxxtkFd3q8PvrVRswIAuODcboTvQ/VmXjsHgCMu7Fa0oHq7qB0CG+/UK/jp820dZ6RawZJPnuKaagUpPq/Qo1ZBms8ehlQqSPU5RJc6Bek+u7ikSoHD5yUa1Chw+Wxgra9Q4PT7a8DBp3iB0/88AIAWhQucPlsAgORetsDt38++CWQL8n3ZAh9fssDPlytw+w/J4pkyBf6+TEGIL1EQ5scvCPVjF4T7cQuK+DELivnxCtz+Y5J9ZZyC4n6cgjJ+jIJyfvmCsn7ZgvJ+uYIMf8X/KS5eEMcvXhDLL1rg9tuBfrGCmH6Rgrh+eEFsP7Qgvh9WIOGHFMj4/gVSvm+BnO9X4PafSvs+BbJ+foG0n1cg72cXaPiZBSp+VoGOH14Q2w8teI7uhxVI+CEFMr5/gZTvWyDn+xVI+j4Fsn5+gbSfVyDvZxd0FPysAh3fXaDluwr0/PSCzirwmwW6/nKBtg8kdwvvv7oPoPHxzQ9nf6Nob+tlQpKTl2381pK9Wm0vgc1ms9lsNpvNZrPZ/vW+AEbmqyT8wqAZAAAAAElFTkSuQmCC" />
+  </defs>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke-width:3.152"
+     d="M 5.5050292,4.4412388 9.8554851,0.09078256 c 0.108552,-0.1085519 0.3020259,-0.098458 0.4540479,-0.077095 0.176411,0.024791 0.354709,0.1064108 0.481827,0.2312165 0.107715,0.1057556 0.178581,0.2557163 0.203384,0.4046173 0.02942,0.1766255 -0.007,0.36563364 -0.07265,0.53224184 -0.01985,0.050401 -0.0554,0.094465 -0.0937,0.1327667 L 5.936296,6.2066273 C 5.8443,6.2986233 5.6886659,6.3013653 5.558618,6.3051003 5.411439,6.3093303 5.2296115,6.3224833 5.1254973,6.2183693 L 0.0644393,1.1573109 c -0.092447,-0.092447 -0.060596,-0.28510004 -0.052879,-0.41561134 0.0076,-0.1285969 0.037941,-0.2417234 0.097778,-0.3558044 0.06479,-0.123524 0.1716995,-0.2317989 0.2952576,-0.2965241 0.1426566,-0.07473 0.3147672,-0.094684 0.4755401,-0.085327 0.098381,0.00573 0.2132906,0.015933 0.2829742,0.085617 1.4277783,1.42777834 4.341919,4.35157784 4.341919,4.35157774 z"
+     id="path1"
+     sodipodi:nodetypes="csssssssssssssssc" />
+</svg>
