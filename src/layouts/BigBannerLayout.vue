@@ -56,7 +56,7 @@ export default {
         startAutoScroll() {
             this.autoScrollInterval = setInterval(() => {
                 this.banner_number = (this.banner_number + 1) % this.banners.length;
-            }, 4000);
+            }, 6000);
         },
         stopAutoScroll() {
             clearInterval(this.autoScrollInterval);
