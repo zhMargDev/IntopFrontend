@@ -36,5 +36,6 @@ export default{
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 </style>

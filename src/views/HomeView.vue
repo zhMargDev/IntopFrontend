@@ -9,19 +9,25 @@
         <SearchLayout
           style="margin-top: 36px;"
           :is_home_page="true"
-        ></SearchLayout>
+        />
       </GradientBackground>
+
+      <StoriesLineLayout
+        style="margin-top: 25px;"
+      />
   </div>
 </template>
 
 <script>
 import GradientBackground from '@/components/GradientBackground.vue';
 import SearchLayout from '@/layouts/SearchLayout.vue';
+import StoriesLineLayout from '@/layouts/StoriesLineLayout.vue';
 
 export default{
     components:{
       GradientBackground,
-      SearchLayout
+      SearchLayout,
+      StoriesLineLayout
     }
 }
 </script>

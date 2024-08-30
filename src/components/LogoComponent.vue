@@ -30,5 +30,6 @@ h3, span{
 #logoBox{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 </style>

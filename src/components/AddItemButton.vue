@@ -16,5 +16,6 @@ button{
     margin: auto 0;
     white-space: nowrap;
     padding: 0 20px;
+    cursor: pointer;
 }
 </style>

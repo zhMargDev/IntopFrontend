@@ -1,18 +1,18 @@
 <template>
     <header>
-        <LogoComponent></LogoComponent>
+        <LogoComponent/>
         <SellOnIntop
             style="margin-left: 40px;"
-        ></SellOnIntop>
+        />
         <LanguageLayout
             style="margin-left: auto;"
-        ></LanguageLayout>
+        />
 
         <img src="@/assets/svg_icons/add.svg" id="add" alt="Add icon">
-        <AddItemButton></AddItemButton>
+        <AddItemButton/>
         <ProfileComponent
             style="margin-left: 10px;"
-        ></ProfileComponent>
+        />
     </header>
 </template>
 
@@ -39,6 +39,7 @@ export default{
     width: 21px;
     height: 21px;
     margin: auto 10px auto 50px;
+    cursor: pointer;
 }
 header{
     display: flex;
