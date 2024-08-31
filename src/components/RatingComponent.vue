@@ -1,23 +1,46 @@
 <template>
-    <div id="rating_main">
+    <div id="rating_main"
+        :style="{
+            gap: is_small ? '1px' : '3px'
+        }"
+    >
         <img
             v-for="index in activeRatinge()" :key="index"
+            :style="{
+                width: is_small ? '5px' : '10px',
+                height: is_small ? '5px' : '10px',
+                
+            }"
             src="@/assets/svg_icons/yellow_star.svg" 
             alt="Full star icon"
         >
         <img
             v-for="index in notActiveRating()" :key="index"
-            src="@/assets/svg_icons/yellow_star.svg" 
+            :style="{
+                width: is_small ? '5px' : '10px',
+                height: is_small ? '5px' : '10px',
+                
+            }"
+            src="@/assets/svg_icons/gray_star.svg" 
             alt="Full star icon"
         >
-        <p>{{ rating }}</p>
+        <p
+            :style="{
+                fontSize: is_small ? '7px' : '12px',
+                marginLeft: is_small ? '0px' : '5px',
+            }"
+        >{{ rating }}</p>
     </div>
 </template>
 
 <script>
 export default{
     props:{
-        rating: Number
+        rating: Number,
+        is_small:{
+            type: Boolean,
+            default: false
+        }
     },
     methods:{
         activeRatinge(){
@@ -33,13 +56,7 @@ export default{
 <style scoped>
 p{
     font-weight: 300;
-    font-size: 12px;
     color: #000000;
-    margin-left: 5px;
-}
-img{
-    width: 10px;
-    height: 10px;
 }
 #rating_main{
     display: flex;

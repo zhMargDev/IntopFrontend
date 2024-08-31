@@ -13,6 +13,7 @@
             <StoryComponent 
                 v-for="index in 30" :key="index"
                 :viewed="false"
+                :rating="3.4"
             />
         </div>
 

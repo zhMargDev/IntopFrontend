@@ -27,6 +27,18 @@
                 style="right: 0;"
             />
         </div>
+
+        <div class="pages_circles" >
+            <div 
+                class="page_circle"
+                v-for="(banner, index) in banners"
+                :key="index"
+                :style="{
+                    backgroundColor: banner_number === index ? '#313131' : 'transparent',
+                }"
+                @click="changeBanner(index)"
+            ></div>
+        </div>
     </section>
 </template>
 
@@ -43,7 +55,11 @@ export default {
             banners: [
                 '@/assets/banner.png',
                 '@/assets/banner.png',
-                '@/assets/banner.png'
+                '@/assets/banner.png',
+                '@/assets/banner.png',
+                '@/assets/banner.png',
+                '@/assets/banner.png',
+                '@/assets/banner.png',
             ],
             autoScrollInterval: null
         }
@@ -56,6 +72,11 @@ export default {
         }
     },
     methods: {
+        changeBanner(index){
+            this.stopAutoScroll();
+            this.banner_number = index;
+            this.startAutoScroll();
+        },
         nextBanner() {
             this.stopAutoScroll();
             this.banner_number = (this.banner_number + 1) % this.banners.length;
@@ -85,6 +106,19 @@ export default {
 </script>
 
 <style scoped>
+.page_circle{
+    width: 10px;
+    height: 10px;
+    border: 3px solid #313131;
+    border-radius: 20px;
+    transition: 300ms;
+    cursor: pointer;
+}
+.pages_circles{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
 #banner_main {
     width: 70vw;
     height: calc(70vw / 2.2);

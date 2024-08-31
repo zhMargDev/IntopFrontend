@@ -15,7 +15,7 @@
         <h4 class="username">Tony</h4>
 
         <RatingComponent
-            :rating="5"
+            :rating="rating"
             style="margin: 0 auto;"
         />
     </div>
@@ -28,7 +28,11 @@ export default{
         viewed:{
             type: Boolean,
             default: false   
-        }
+        },
+        rating:{
+            type: Number,
+            default: 0
+        },
     },
     components:{
         RatingComponent

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-bottom: 300px;" >
       <GradientBackground
         :padding="'66px 0px'"
       >
@@ -17,6 +17,28 @@
       />
 
       <BigBannerLayout/>
+
+      <HomePageLocationLayer/>
+
+      <section
+        style="
+          padding: 0 20%;
+        "
+      >
+        <SectionTitleComponent
+          :title="'Все категории и подкатегории проекта'"
+        />
+
+        <AllCategoriesLayout />
+
+        <SectionTitleComponent
+          :title="'Самые популярные объявление дня'"
+        />
+      </section>
+
+      <AnnouncementCardGroup
+        :cards_count="5"
+      />
   </div>
 </template>
 
@@ -25,13 +47,21 @@ import GradientBackground from '@/components/GradientBackground.vue';
 import BigBannerLayout from '@/layouts/BigBannerLayout.vue';
 import SearchLayout from '@/layouts/SearchLayout.vue';
 import StoriesLineLayout from '@/layouts/StoriesLineLayout.vue';
+import HomePageLocationLayer from '@/layouts/HomePageLocationLayer.vue';
+import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
+import AllCategoriesLayout from '@/layouts/AllCategoriesLayout.vue';
+import AnnouncementCardGroup from '@/layouts/AnnouncementCardGroup.vue';
 
 export default{
     components:{
       GradientBackground,
       SearchLayout,
       StoriesLineLayout,
-      BigBannerLayout
+      BigBannerLayout,
+      HomePageLocationLayer,
+      SectionTitleComponent,
+      AllCategoriesLayout,
+      AnnouncementCardGroup
     }
 }
 </script>

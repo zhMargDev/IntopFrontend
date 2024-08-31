@@ -1,6 +1,8 @@
 <template>
-  <HeaderLayout></HeaderLayout>
-  <router-view/>
+  <div :style="{backgroundColor: $store.state.background || 'white'}">
+    <HeaderLayout></HeaderLayout>
+    <router-view/>
+  </div>
 </template>
 
 <script>
