@@ -1,9 +1,13 @@
 <template>
     <section>
         <div id="banner_main">
-            <button class="arrow" @click="prevBanner">
-                <img src="@/assets/svg_icons/arrow.svg" alt="Arrow icon">
-            </button>
+            <ArrowButton
+                :button_width="'130px'"
+                :arrow_size="'30px'"
+                :arrow_deg="'90deg'"
+                :is_absolute="true"
+                @click="prevBanner"
+            />
 
             <div id="banner_container" :style="bannerContainerStyle">
                 <img 
@@ -14,16 +18,25 @@
                     class="banner-img"
                 >
             </div>
-
-            <button class="arrow" @click="nextBanner">
-                <img src="@/assets/svg_icons/arrow.svg" alt="Arrow icon">
-            </button>
+            <ArrowButton
+                :button_width="'130px'"
+                :arrow_size="'30px'"
+                :arrow_deg="'270deg'"
+                :is_absolute="true"
+                @click="nextBanner"
+                style="right: 0;"
+            />
         </div>
     </section>
 </template>
 
 <script>
+import ArrowButton from '@/components/ArrowButton.vue';
+
 export default {
+    components:{
+        ArrowButton
+    },
     data() {
         return {
             banner_number: 0,
@@ -72,37 +85,6 @@ export default {
 </script>
 
 <style scoped>
-.arrow:last-child img {
-    rotate: 270deg;
-}
-.arrow:first-child img {
-    rotate: 90deg;
-}
-.arrow:last-child {
-    right: 35px;
-}
-.arrow:first-child {
-    left: 35px;
-}
-.arrow img {
-    width: 100%;
-    height: 100%;
-}
-.arrow {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 #banner_main {
     width: 70vw;
     height: calc(70vw / 2.2);
