@@ -1,9 +1,19 @@
 <template>
-    <div class="card">
+    <div class="card"
+        :style="{
+            border: is_top ? '2px solid yellow' : '0px'
+        }"
+    >
         <div class="card_image_box">
-            <AnnouncementPictureMask 
-                :is_top="false"
-                :z_index="5"
+            <TopTicket
+                style="
+                    z-index: 5;
+                    top: 13px;
+                    left: -10px;
+                    position: absolute;
+                "
+
+                v-if="is_top"
             />
             <img src="@/assets/for_delete/picture_2.webp" class="card_picture" alt="Card picture">
             <div 
@@ -29,37 +39,35 @@
                 "
             >
                 <div class="buttons_box">
-                    <button v-if="time > 0">
-                        <img src="@/assets/svg_icons/orange_clock.svg" alt="Clock">
-                    </button>
-                    <p v-if="time > 0">{{ formatTimer(time) }}</p>
                     <button>
                         <img src="@/assets/svg_icons/orange_heart.svg" alt="Clock">
                     </button>
                 </div>
-
-
-                <h4 
-                    class="price"
-                    :style="{
-                        'color': is_top ? '#ffdd1f' : 'white'
-                    }"
-                >{{ formattedNumber(price) }}</h4>
             </div>
         </div>
         
-        <AnnouncementCardInformationComponent/>
+        <AnnouncementCardInformationComponent
+            :is_top="is_top"
+            :price="price"
+            :time="time"
+        />
     </div>
 </template>
 
 <script>
 import AnnouncementCardInformationComponent from '@/components/AnnouncementCardInformationComponent.vue';
-import AnnouncementPictureMask from '@/components/CardIsInTop.vue';
+import TopTicket from '@/components/TopTicket.vue';
 
 export default {
+    props:{
+        is_top: {
+            type: Boolean,
+            default: false
+        }
+    },
     components:{
-        AnnouncementPictureMask,
-        AnnouncementCardInformationComponent
+        AnnouncementCardInformationComponent,
+        TopTicket
     },
     data(){
         return{
@@ -71,43 +79,11 @@ export default {
         picture(){
             return require('@/assets/for_delete/picture_2.webp')
         },
-        formattedNumber(value) {
-            // Возвращает отформотированную ценру добавляя тип валюты
-            return `${value.toLocaleString('ru-RU')} ${this.$store.state.currency}` ;
-        },
-        formatTimer(time) {
-            const secondsInMinute = 60;
-            const secondsInHour = 60 * secondsInMinute;
-            const secondsInDay = 24 * secondsInHour;
-    
-            const days = Math.floor(time / secondsInDay);
-            const hours = Math.floor((time % secondsInDay) / secondsInHour);
-            const minutes = Math.floor((time % secondsInHour) / secondsInMinute);
-    
-            let formattedTime = '';
-            if (days > 0) {
-                formattedTime += days + ' д ';
-            }
-            if (hours > 0) {
-                formattedTime += hours + ' ч ';
-            }
-            if (minutes > 0) {
-                formattedTime += minutes + ' м ';
-            }
-    
-            return formattedTime.trim();
-        }
     }
 }
 </script>
 
 <style scoped>
-.buttons_box p{
-    font-weight: 500;
-    font-size: 8px;
-    color: #FFFFFF;
-    margin-top: 2px;
-}
 .buttons_box{
     display: flex;
     justify-content: center;
@@ -125,13 +101,6 @@ button{
     background-color: transparent;
     margin: 0;
     padding: 0;
-}
-.price{
-    font-weight: 500;
-    font-size: 13px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
 }
 .card_picture {
     height: 100%;

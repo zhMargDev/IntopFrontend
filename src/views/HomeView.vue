@@ -22,23 +22,25 @@
 
       <section
         style="
-          padding: 0 20%;
+          padding: 0 15%;
         "
       >
         <SectionTitleComponent
           :title="'Все категории и подкатегории проекта'"
+          :icon="require('@/assets/svg_icons/categories_title_icon.svg')"
         />
 
         <AllCategoriesLayout />
 
         <SectionTitleComponent
-          :title="'Самые популярные объявление дня'"
+          :title="'Топ объявления для вас'"
+          :icon="require('@/assets/svg_icons/announcements_title_icon.svg')"
+        />
+        <AnnouncementCardGroup
+          :cards_count="8"
         />
       </section>
 
-      <AnnouncementCardGroup
-        :cards_count="5"
-      />
   </div>
 </template>
 

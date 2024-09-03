@@ -54,12 +54,18 @@ export default {
 
 
 <style scoped>
-#stories_box{
+#stories_box {
     width: 100%;
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+#stories_box::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
 }
 #stories_main{
     display: grid;

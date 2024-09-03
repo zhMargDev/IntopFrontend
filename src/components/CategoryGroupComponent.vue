@@ -2,42 +2,40 @@
     <div class="cateogry_box">
         <div 
             class="category_image_box"
-            @click="is_open = !is_open"
-        >
-        </div>
-        <div class="main_category_box">
-            <img src="@/assets/svg_icons/arrow.svg" alt="Arrow">
-            <h4
-                @click="is_open = !is_open"
-            >Жильё и недвижимость</h4>
-        </div>
-
-        <div 
-            class="subcategories_box"
             :style="{
-                maxHeight: is_open ? '200px' : '0px'
+                backgroundColor: is_selected ? '#FFF9E9' : '#EBECEC'
             }"
+            @click="request_to_select_category"
         >
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
-            <p>Продам недвижимость</p>
+
+        <img :src="picture" alt="Category icon">
+
+        </div>
+        <div class="category_title_box">
+            <h4
+                :style="{
+                    /* Цвет текста становится оранжевым если категория была выбрана */
+                    color: is_selected ? '#F16A26' : '#707070'
+                }"
+            >{{ text }}</h4>
         </div>
     </div>
 </template>
 
 <script>
 export default{
-    data(){
-        return{
-            is_open: false
+    props:{
+        is_selected: {
+            type: Boolean,
+            default: false
+        },
+        picture: String,
+        text: String
+    },
+    methods:{
+        request_to_select_category(){
+            // Выполняет запрос на выбор данной категории
+            this.$emit('select_category')
         }
     }
 }
@@ -82,19 +80,20 @@ h4{
     line-height: 12px;
     color: #707070;
     cursor: pointer;
+    transition: 300ms;
 }
-.main_category_box img{
+.category_title_box img{
     width: 14px;
 }
-.main_category_box{
+.category_title_box{
     display: flex;
     gap: 6px;
     margin-bottom: auto;
+    justify-content: center;
 }
 .category_image_box{
     width: 110px;
     height: 110px;
-    background: #EBECEC;
     border-radius: 110px;
     margin: 0 auto;
     display: flex;
@@ -102,11 +101,13 @@ h4{
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: 200ms;
 }
 .cateogry_box{
     display: grid;
     gap: 10px;
     height: max-content;
     margin-bottom: auto;
+    cursor: pointer;
 }
 </style>

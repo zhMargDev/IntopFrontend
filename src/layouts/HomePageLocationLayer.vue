@@ -2,16 +2,37 @@
     <div>
         <div id="choose_location_main_box">
             <div id="backgroudn_color_line"></div>
-            <div id="indicate_location_box">
-                <img src="@/assets/png_icons/placeholder.png" class="placeholder_icon" alt="Placeholder icon">
+
+            <!--При нажатии открывает меню с выбором локации-->
+
+            <div id="indicate_location_box"
+                @click="location_box_is_open = !location_box_is_open"
+            >
+                <img src="@/assets/png_icons/black-placeholder.png" class="placeholder_icon" alt="Placeholder icon">
                 <p>Указать локацию</p>
                 <div class="circle">
-                    <img src="@/assets/svg_icons/arrow.svg" alt="Arrow icon">
+
+                    <!--Если меню с локациями открыта, стрелка разварачивается наверх
+                        Анимация прокрутки низ - направо - ввех
+                    -->
+
+                    <img 
+                        src="@/assets/svg_icons/arrow.svg" 
+                        alt="Arrow icon"
+                        :style="{
+                            'rotate': location_box_is_open ? '-180deg' : '0deg'
+                        }"
+                    >
                 </div>
             </div>
         </div>
 
-        <div id="locations_main_box">
+        <div 
+            id="locations_main_box"
+            :style="{
+                'max-height': location_box_is_open ? '500px' : '0px'
+            }"  
+        >
             <div id="locations_box">    
                 <div class="title_box">
                     <h3>Выберите город или страну</h3>
@@ -87,6 +108,11 @@ import MapComponent from '@/components/MapComponent.vue';
 export default{
     components:{
         MapComponent
+    },
+    data(){
+        return{
+            location_box_is_open: false
+        }
     }
 }
 </script>
@@ -159,8 +185,10 @@ h3{
 #locations_main_box{
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 0 20%;
+    padding: 0 15%;
     gap: 20px;
+    overflow: hidden;
+    transition: 300ms;
 }
 #backgroudn_color_line{
     width: 100%;
@@ -176,6 +204,7 @@ h3{
     width: 11px;
     height: 11px;
     filter: invert(1);
+    transition: 200ms;
 }
 .circle{
     width: 23px;
@@ -206,6 +235,7 @@ p{
     justify-content: center;
     position: relative;
     z-index: 2;
+    cursor: pointer;
 }
 #choose_location_main_box{
     display: flex;

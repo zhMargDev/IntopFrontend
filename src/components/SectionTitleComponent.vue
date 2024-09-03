@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="@/assets/svg_icons/categories.svg" alt="Category icon">
+        <img :src="icon" alt="Category icon">
         <h3>{{ title }}</h3>
     </div>
 </template>
@@ -11,7 +11,8 @@ export default{
         title: {
             type: String,
             default: ''
-        }
+        },
+        icon: String
     }
 }
 </script>
@@ -19,17 +20,16 @@ export default{
 <style scoped>
 h3{
     font-weight: 500;
-    font-size: 13px;
-    color: #FFFFFF;
+    font-size: 16px;
+    color: #282829;
 }
 img{
-    width: 20px;
+    width: 24px;
 }
 div{
-    background: linear-gradient(90deg, #F16C26 0%, #FEBF1C 100%);
     border-radius: 8px;
     padding: 7px 14px;
-    gap: 17px;
+    gap: 13px;
     display: flex;
     align-items: center;
     width: max-content;
